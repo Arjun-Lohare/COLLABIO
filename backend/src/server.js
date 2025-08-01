@@ -10,6 +10,7 @@ import path from "path";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
+import { url } from "inspector";
 const app = express();
 
 const _dirname = path.resolve();
@@ -26,6 +27,9 @@ const swaggerOptions = {
     servers: [
       {
         url: "http://localhost:3001",
+      },
+      {
+        url: "https://collabio-5eo4.onrender.com",
       },
     ],
     components: {
